@@ -1,0 +1,8 @@
+cluster.name: docker-example
+node.name: es
+path.data: /home/esuser/data
+network.host: 0.0.0.0
+# Below stuff from JJK and the internet
+# https://elastic.co/guide/en/elasticsearch/reference/current/bootstraqp-checks.html#single-node-discovey
+discovery.type: single-node
+
