@@ -29,5 +29,5 @@ ADD nginx.conf /etc/nginx/
 
 WORKDIR /etc/nginx
 # EXPOSE 80
-CMD /home/esuser/filebeat-7.8.1-linux-x86_64/filebeat -c /home/esuser/filebeat-7.8.1-linux-x86_64/filebeat.yml >/dev/null 2>&1 & service nginx start
-#CMD service nginx start
+#CMD /home/esuser/filebeat-7.8.1-linux-x86_64/filebeat -c /home/esuser/filebeat-7.8.1-linux-x86_64/filebeat.yml >/dev/null 2>&1 & service nginx start
+CMD service nginx start

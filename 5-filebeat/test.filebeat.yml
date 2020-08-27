@@ -1,0 +1,36 @@
+# Based on working Sysmon ELK - JJK
+#========= Filebeat inputs ==================
+filebeat.inputs:
+- type: log
+  enabled: false
+  paths:
+    - /var/log/*.log
+  
+#========= Filebeat modules ==================
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
+
+#========= Elasticsearch template setting =============
+setup.template.settings:
+  index.number_of_shards: 1
+  
+#========= General =============================
+
+#========= Dashboards ==========================
+
+#========= Kibana ==============================
+
+#========= Outputs =============================
+
+#--------- Elasticsearch Output ----------------
+
+#--------- Logstash Output ---------------------
+output.logstash:
+  hosts: ["localhost:5044"]  # log.io doc has this as 5000
+  worker: 1
+  
+#========== Processors =========================
+
+#========== Logging ============================
+
